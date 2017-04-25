@@ -1,0 +1,11 @@
+*.bak
+*.aux
+*.log
+*.out
+*.pdf
+*.gz
+*.toc
+*.odg
+*.odg#
+*.bcf
+*.run.xml
