@@ -9,3 +9,6 @@
 *.odg#
 *.bcf
 *.run.xml
+*.txt
+*.dat
+*.py
