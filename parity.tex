@@ -53,11 +53,75 @@ Benedikt Paul Schallmo   &   Jonas Fischer \\ Matrikelnummer: 2686286  &   Matri
 \section{Radioaktive Zerfälle bene}
 \section{Die vier Wechselwirkungen bene}
 prozesse vergleich erhaltungsgrößen
-\section{Parität jonas}
-
-\section{Bremsstrahlung jonas}
-\section{Wechselwirkung von elektromagnetischer Strahlung mit Materie jonas}
-\section{Szintillationsdetektoren jonas}
+\section{Parität}
+Parität beschreibt das Verhalten einer physikalischen Größe unter Raumspiegelung. So gilt etwa für den Ortsvektor $ \vec{r} $
+\begin{align}
+\hat{P}\ket{\vec{r}}=-\ket{\vec{r}}
+\end{align}
+Dies nennt man negative Parität. Wenn sich das Vorzeichen nicht ändert besitzt diese Größe positive Parität, wie etwa der Drehimpuls $ \vec{L} $
+\begin{align}
+\vec{L}=m\vec{r}\times\vec{v}
+\end{align}
+Da sich sowohl bei $ \vec{r} $ als auch bei $ \vec{v} $ das Vorzeichen unter Raumspiegelung ändert ist 
+\begin{align}
+\hat{P}\ket{\vec{L}}=+\ket{\vec{L}}
+\end{align}
+\subsection{Polare und axiale Vektoren, Skalare und Pseudoskalare}
+Als polaren Vektor bezeichnet man Vektoren, die unter Raumspiegelung ihr Vorzeichen ändern.\\
+Als axiale Vektoren bezeichnet man folglich solche die dies nicht tun.\\
+Ähnlich verhält es sich mit den Skalaren und Pseudoskalaren. Skalare ändern ihr Vorzeichen nicht, Pseudoskalare hingegen schon (siehe Tabelle \ref{tab:polar}).
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline 
+ & Parität + & Parität - \\ 
+\hline 
+Vektor & \shortstack{axial\\$\vec{\omega},\vec{L}$} & \shortstack{polar \\$\vec{v},\vec{x}$} \\ 
+\hline 
+Skalar & \shortstack{Skalar \\$m,T$} & \shortstack{Pseudoskalar\\Helizität $h$} \\ 
+\hline 
+\end{tabular} 
+\caption{Beispiele für Polare und axiale Vektoren, Skalare und Pseudoskalare. Die Helizität $h$ ist definiert als $h=\vec{J}\cdot\frac{\vec{p}}{|\vec{p}|}$}\label{tab:polar}
+\end{table}
+Für uns kommen also nur polare Vektoren oder Pseudoskalare in Frage, wenn wir eine Paritätsverletzung messen wollen. Es bietet sich für uns an Pseudoskalare zu messen, da dies einfacher ist als Vektoren zu bestimmen.
+\subsection{$\Theta$-$\tau$-Rätsel}
+Lange nahm man an, dass die Parität eine Erhaltungsgröße sei, wie etwa die Energie oder der Impuls. Die Entdeckung des $ \Theta^+ $- und des $ \tau^+ $-Teilchen stellen dies in Frage. Die gleichen Eigenschaften der Teilchen legen nahe, dass es sich um ein und das selbe Teilchen handelt, jedoch zerfallen diese unterschiedlich:
+\begin{align}
+\Theta^+&\rightarrow\pi^++\pi^0\\
+\tau^+&\rightarrow\pi^++\pi^++\pi^-
+\end{align}
+was an sich noch kein Problem ist, allerdings besitzen die Pionen alle eine negative Parität, womit sich für $\Theta^+$ eine positive und für $\tau^+$ eine negative Parität ergibt. Damit müssen die Teilchen als unterschiedliche behandelt werden oder die Parität ist beim Zerfall des \glqq $\Theta$-$\tau$-Teilchens\grqq\, nicht erhalten.
+\section{Bremsstrahlung}
+Bremsstrahlung bezeichnet die elektromagnetische Strahlung, die entsteht, wenn elektrische Ladung beschleunigt wird. In unserem Fall handelt es sich um ein Abbremsen in Materie. Die Elektronen werden im Feld der Atome des Materials abgelenkt und abgebremst. Das Spektrum der entstehenden Strahlung ist kontinuierlich mit der maximal Energie der $ \gamma $-Quanten gleich der gesamten kinetischen Energie des Elektrons.
+\section{Wechselwirkung von elektromagnetischer Strahlung mit Materie}
+Die Strahlung gibt hauptsächlich über die folgenden drei Effekte ihre Energie ab.
+\subsection{Photoeffekt}
+Beim Photoeffekt gibt ein Photon seine gesamte Energie an ein Elektron ab. Die Energie, die nach dem herauslösen aus dem Verband $ W_k $ übrig ist geht in Form kinetischer Energie an das Elektron über. Dieser Effekt dominiert bei kleinen Energien bis zu einigen hundert keV.
+\subsection{Compton-Effekt ?????}
+Beim Compton-Effekt stößt das Photon mit einem ruhenden Elektron elastisch. Die Energie des Photons und des Elektrons nach dem Stoß ist 
+\begin{align}
+E_\gamma'(\theta)&=\frac{E_\gamma}{1+\frac{E_\gamma}{m_ec^2}(1-\cos\theta)}\\
+E_e'(\theta)&=E_\gamma-E_\gamma'(\theta)
+\end{align}
+Dieser Effekt dominiert zwischen einigen hundert und tausend keV. Aus dieser Formel ist allerdings nicht ersichtlich unter welchem Winkeln die Photonen bevorzugt gestreut werden. Dies wird durch den Klein-Nishina-Wirkungsquerschnitt beschrieben:
+\begin{align}
+\frac{\text{d}\sigma}{\text{d}\Omega}=\frac{r_0^2}{2}\left(\frac{k}{k_0}\right)^2\cdot\left(\Phi_0+f\cdot\text{P}\cdot\Phi_\text{H}\right)
+\end{align}
+Mit 
+\begin{align*}
+\Phi_0&=1+\cos^2\omega+(k_0-k)(1-\cos\omega)\\
+\Phi_\text{H}&=-(1-\cos\omega)[(k_0+k)\cos\omega\cdot\cos\phi+k\cdot\sin\omega\cdot\sin\psi\cdot\cos\phi]\\
+r_0&:\text{ klassischer Elektronenbahnradius}\\
+k_0,k&:\text{ Photonenimpuls vor und nach dem Stoß in einheiten von }m_ec^2\\
+f&:\text{ Anteil der ausgerichteten Eisenelektronen}\\
+\text{P}&:\text{ Polarisationsgrad der Photonen und Elektronen}\\
+\omega&:\text{ Streuwinkel (zwischen }k_0\text{ und }k)\\
+\psi&:\text{ Winkel zwischen der }k_0\text{und dem Spin der Elektronen der Eisenatome}\\
+\phi&:\text{ Winkel zwischen }k_0-k\text{ Ebene }k_0-\text{Spin Ebene}
+\end{align*}
+Interessant für uns ist hier die Abhängigkeit vom Polarisationsgrad P, denn über den von uns gemessenen Zählrateneffekt $\eta=\text{P}f\frac{\Phi_0}{\Phi_\text{H}}$ können wir so auf die Polarisation der Elektronen schließen (siehe Abschnitt \ref{subsec:polgrad}).
+\subsection{Paarbildung}
+\section{Szintillationsdetektor jonas}
 \section{Wu-Experiment bene}
 Einen Nachweis der Paritätsverletzung bei der schwachen Wechselwirkung liefert das Wu-Experiment. Dabei wird der Betazerfall an \isotope[60]{Co} untersucht, welches zu \isotope[60]{Ni}
 
@@ -75,7 +139,7 @@ Der Aufbau ist in Abbildung    dargestellt.
 \section{Strontium}
 \subsection{Bremsstrahlungsspektrum}
 \subsection{Enpunktsenergie im Bremsstrahlungsspektrum}
-\subsection{Polarisationsgrad}
+\subsection{Polarisationsgrad}\label{subsec:polgrad}
 \section{Fehlerberechnung und Messzeitabschätzung}
 
 \chapter{Fazit}
