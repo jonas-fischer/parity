@@ -134,10 +134,48 @@ Der Aufbau ist in Abbildung    dargestellt.
   
      	
 \chapter{Auswertung}
-\section{Natrium jonas}
-\subsection{Peaks erklären und Kanäle zusammenfassen}
-\subsection{Energiekalibration}
-\subsection{Apperativ vorgetäuschte Polarisation}
+Zuerst wird das Eichspektrum des Natriums und anschließend das Bremsspektrum des Strontiums ausgewertet.
+\section{Natrium}
+Zuerst wird den Kanalnummern durch die Energieeichung eine Energie zugeordnet und anschließend überprüft, ob eine apparativ vorgetäuschte Polarisation vorliegt.
+\subsection{Energiekalibrierung}
+Das mit \isotope[22]{Na} aufgenommene Spektrum ist in Abbildung \ref{fig:kanalK} zu sehen.
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{\textwidth}
+   	\includegraphics[width=\textwidth]{Graphen/kanalzsmK.pdf}
+   	\caption{Zählraten der zwei ADC, man erkennt, dass diese sich kaum unterscheiden. In rot die Kanalzusammenfassung von ADC1}
+  	\label{fig:kanalK}
+   	\end{minipage}
+\end{figure}
+Der Peak bei Kanal 591 ist der Photopeak vom verwendeten \isotope[22]{Na}, davor ist die Compton-Kante zu erkennen. Der Peak bei Kanal 213 entspricht der Ruheenergie des beim Zerfall entstanden Positrons von 511 keV. Die Peaks unterhalb von Kanal 200 sind Artefakte aus der Messelektronik. Das Untergrundspektrum ist hier bereits abgezogen.??\\
+Mit diesen zwei Peaks kann nun eine Energiekalibrierung durchgeführt werden. Wir wählen $ f(K)=mK+b $. Es ergibt sich $ m=(2,021\pm0,015)\frac{\text{keV}}{\text{Kanal}} $ und $ b=(80,492\pm5,152) \text{keV}$. Damit ergibt sich das Spektrum in Abbildung \ref{fig:kanal}.
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{\textwidth}
+   	\includegraphics[width=\textwidth]{Graphen/kanalzsm.pdf}
+   	\caption{Eichspektrum aufgetragen über die Energie}
+  	\label{fig:kanal}
+   	\end{minipage}
+\end{figure}
+\subsection{Apparativ vorgetäuschte Polarisation}
+Um zu untersuchen ob apparativ vorgetäuschte Polarisation vorliegt berechnen wir den Zählrateneffekt $ \eta=\frac{z^+-z^-}{z^++z^-} $ dieser müsste symmetrisch um die Null verteilt sein, da keine Polarisation vorliegen sollte.
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{\textwidth}
+   	\includegraphics[width=\textwidth]{Graphen/eta.pdf}
+   	\caption{Zählrateneffekt $ \eta $ für $ \isotope[22]{Na} $}
+  	\label{fig:eta}
+   	\end{minipage}
+\end{figure}
+Wir betrachten die Kanäle 21 bis 760, da außerhalb die Zählraten selbst mit Kanalzusammenfassung zu niedrig für eine statistisch sinnvolle Aussage sind. Auf den ersten Blick sehen die Werte symmetrisch verteilt aus. Um dies zu überprüfen führen wir einen $ \chi^2 $-Test durch. Die Prüfgröße $ \chi^2 $ ist
+\begin{equation}
+\chi^2=\sum\limits_i \frac{(\eta_i-x_i)^2}{\sigma^2}
+\end{equation}
+Hier ist $ x_i $ der erwartete Wert für den jeweiligen Wert und $ \sigma^2 $ die Varianz. In unserem Fall ist $ x_i\equiv 0 $ für alle $i$. Um das reduzierte $ \chi^2 $ zu erhalten müssen wir durch die Anzahl der Freiheitsgrade teilen, die bei uns der Anzahl der Kanäle minus 1 entspricht, da ein Freiheitsgrad verloren geht, wenn wir die Varianz berechnen. Es ergibt sich 
+\begin{equation}
+\chi^2_{red]}=\frac{\chi^2}{f-1}=\frac{743,26}{739-1}=1,00712
+\end{equation}
+Damit liegt keine apparativ vorgetäuschte Polarisation vor.
 \section{Strontium}
 \subsection{Bremsstrahlungsspektrum}
 \subsection{Enpunktsenergie im Bremsstrahlungsspektrum}
