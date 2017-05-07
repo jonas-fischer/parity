@@ -177,16 +177,52 @@ Hier ist $ x_i $ der erwartete Wert für den jeweiligen Wert und $ \sigma^2 $ di
 \end{equation}
 Damit liegt keine apparativ vorgetäuschte Polarisation vor.
 \section{Strontium}
-\subsection{Bremsstrahlungsspektrum}
-\subsection{Enpunktsenergie im Bremsstrahlungsspektrum}
+Mit dem Spektrum von Strontium soll die Paritätsverletzung nachgewiesen werden. Dazu muss zunächst die Enpunktsenergie bestimmt werden und im Anschluss über den Polarisationsgrad der Grad der Verletzung bestimmt werden.
+\subsection{Bremsstrahlungsspektrum und Endpunktsenergie}
+Abbildungen \ref{4.2.1a} und \ref{4.2.1b} zeigen die Bremsstrahlspektren aufgenommen am ADC1 und am ADC2. Zudem wurden je 10 Kanäle zusammengefasst, um die Statistik zu verbessern.  
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{1\textwidth}
+   	\includegraphics[width=1\textwidth]{Graphen/strontium1.pdf}
+   	\caption{Bremsstrahlungsspektrum von Strontium am ADC1}
+  	\label{4.2.1a}
+   	\end{minipage}
+\end{figure} 
+Man kann erkennen, dass beide Bremsstrahlspektren sehr ähnlich sind. Durch bloßes betrachten lässt sich kein Unterschied feststellen. 
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{1\textwidth}
+   	\includegraphics[width=1\textwidth]{Graphen/strontium2.pdf}
+   	\caption{Bremsstrahlungsspektrum von Strontium am ADC2}
+  	\label{4.2.1b}
+   	\end{minipage}
+\end{figure}  
+
+Die Endpunktsenergie bezeichnet die maximale Energie, die ein Bremsstrahlungsquant besitzen kann. Sie berechnet sich über die Comptonformel
+\begin{align*}
+E_{\text{End}}=\frac{E_{\beta}}{1+\dfrac{E_{\beta}}{m_ec^2}\left(1-\cos{\theta}\right)},
+\end{align*}
+dabei bezeichnet $E_{\beta}$ die Energie des Betazerfalls und $\theta=45,33$° den Streuwinkel. Für die Energie beim Zerfall von \isotope[90]{Strontium} gilt $E_{\beta}=546,2\,\si{keV}$, sodass sich für die Endpunktsenergie $E_{\text{End}}=414,6\,\si{keV}$ ergibt. Diese Energie ist im Bremsstrahlungsspektrum (siehe Abbildungen \ref{4.2.1a} und \ref{4.2.1b}) nicht zu erkennen. In Abbildungen \ref{4.2.1c} und \ref{4.2.1d} sind die Bremsstrahlungsspektren im Bereich von 700 keV bis 1100 keV vergrößert dargestellt. Da der Untergrund nur über einen sehr kurzen Zeitraum gemessen wurde, schwankt dieser sehr stark und es lässt sich nicht genau erkennen, ab wann das Spektrum in etwa dem Untergrund entspricht. Man kann lediglich erahnen, dass die experimentelle Endpunktsenergie bei etwa $E_{\text{End,exp.}}=950\,\si{keV} - 1000\,\si{keV}$ liegt. Dies entspricht nicht dem erwarteten Wert für den Zerfall von Strontium. Betrachtet man den weiteren Zerfall des Zerfallsproduktes \isotope[90]{Yttrium}, so erhält man für $E_{\beta}=2283,9\,\si{keV}$ für die Endpunktsenergie  $E_{\text{End}}=981,3\,\si{keV}$. Dies deckt sich im Rahmen der Genauigkeit mit den experimentellen Beobachtungen.
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{1\textwidth}
+   	\includegraphics[width=1\textwidth]{Graphen/endenergie1.pdf}
+   	\caption{Bremsstrahlungsspektrum von Strontium im Bereich von 700 bis 1100 keV am ADC1}
+  	\label{4.2.1c}
+   	\end{minipage}
+\end{figure}  
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{1\textwidth}
+   	\includegraphics[width=1\textwidth]{Graphen/endenergie2.pdf}
+   	\caption{Bremsstrahlungsspektrum von Strontium im Bereich von 700 bis 1100 keV am ADC2}
+  	\label{4.2.1d}
+   	\end{minipage}
+\end{figure}
 \subsection{Polarisationsgrad}\label{subsec:polgrad}
 \section{Fehlerberechnung und Messzeitabschätzung}
 
 \chapter{Fazit}
-
-
-\chapter{Anhang}
-
 
 
 
@@ -195,6 +231,10 @@ Damit liegt keine apparativ vorgetäuschte Polarisation vor.
 
 \renewcommand{\bibname}{Literaturverzeichnis}
 \begin{thebibliography}{Bak89}
+\bibitem[1]{1} Literaturmappe zum Versuch Paritätsverletzung beim Betazerfall, TU Darmstadt.
+\bibitem[2]{2} Wolfgang Demtröder: Experimentalphysik 4: Kern-, Teilchen- und Astrophysik. 5.Auflage, Springer, 2017.
+\bibitem[3]{3} Versuchsanleitung zum Versuch Paritätsverletzung beim Betazerfall, TU Darmstadt.
+
 
 
 
